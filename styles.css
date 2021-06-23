@@ -1,0 +1,182 @@
+body {
+  background-color: #bbbdbb;
+}
+
+header {
+  height: 10vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #ffffff;
+  border-bottom: 5px solid #333333;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  height: 10vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #efefef;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-top: 10vh;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-areas: "main sidebar";
+}
+
+/* Game Section Styles */
+.play-section {
+  grid-area: main;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.play-section-item {
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.one {
+  background-color: #6f98a8;
+}
+
+.two {
+  background-color: #2b8ead;
+}
+
+.three {
+  background-color: #2f454e;
+}
+
+.four {
+  background-color: #bfbfbf;
+}
+
+.play-control {
+  height: 80vh;
+  background-color: #efefef;
+  grid-area: sidebar;
+  padding: 30px;
+}
+
+/* Button Section Styles */
+.btn {
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 8px 6px -6px #000000;
+  color: #fff;
+  background-color: #72c3dc;
+  font-size: 1.5em;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: #72c3dc;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    background-color: #fff;
+  }
+  header {
+    height: 5vh;
+    background-color: #333333;
+    color: #fff;
+  }
+  footer {
+    height: 5vh;
+    background-color: #fff;
+  }
+
+  .container {
+    margin-top: 20vh;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "main";
+  }
+
+  .play-section {
+    grid-area: main;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .play-section-item {
+    width: 100%;
+    height: calc(60vh / 9);
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #000;
+  }
+
+  .play-section-item::before {
+    width: 15px;
+    content: " ";
+    height: 100%;
+    position: absolute;
+    left: 0;
+  }
+
+  .one,
+  .two,
+  .three,
+  .four {
+    background-color: #efefef;
+  }
+
+  .one::before {
+    background-color: #2b8ead;
+  }
+
+  .two::before {
+    background-color: #6f98a8;
+  }
+
+  .three::before {
+    background-color: #2f454e;
+  }
+
+  .four::before {
+    background-color: #bfbfbf;
+  }
+
+  /* Button Section Styles */
+  .play-control {
+    flex: 0 0 100%;
+    width: 95%;
+    height: fit-content;
+    background-color: #fff;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    top: 5vh;
+    left: 0;
+  }
+
+  .btn {
+    width: 40%;
+  }
+}
