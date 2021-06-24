@@ -11,7 +11,7 @@ let arr = [
 ];
 
 /*
-    Description: This function creates the grid on the board
+    Description: The playboard created by this method
  */
 const createPlayBoard = () => {
   const playSection = document.getElementById("play-section");
@@ -26,7 +26,7 @@ const createPlayBoard = () => {
 };
 
 /*
-    Description: This function sorts the array
+    Description: This sort handler
  */
 const sort = () => {
   arr = arr.sort(function compare(a, b) {
@@ -42,7 +42,7 @@ const sort = () => {
 };
 
 /*
-    Description: This function shuffles the array
+    Description: This shuffle handler
  */
 const shuffle = () => {
   let n = arr.length;
@@ -61,7 +61,7 @@ window.onload = () => {
   createPlayBoard();
   sort();
 
-  // Creating Event Listeners for buttons
+  // Bind method to handler
   document.getElementById("btnShuffle").addEventListener("click", shuffle);
   document.getElementById("btnSort").addEventListener("click", sort);
 };

@@ -35,7 +35,7 @@ footer {
   grid-template-areas: "main sidebar";
 }
 
-/* Game Section Styles */
+/* Play Ground Styles */
 .play-section {
   grid-area: main;
   height: 80vh;
@@ -74,7 +74,7 @@ footer {
   padding: 30px;
 }
 
-/* Button Section Styles */
+/* Control Styles */
 .btn {
   height: 50px;
   width: 100%;
@@ -161,7 +161,7 @@ footer {
     background-color: #bfbfbf;
   }
 
-  /* Button Section Styles */
+  /* Control Styles */
   .play-control {
     flex: 0 0 100%;
     width: 95%;
